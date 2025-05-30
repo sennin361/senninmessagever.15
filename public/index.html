@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>仙人チャット - 入室</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h1>仙人チャット</h1>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="ユーザー名" required />
+      <input type="text" id="room" placeholder="あいことば（部屋名）" required />
+      <button type="submit">入室する</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value.trim();
+      const room = document.getElementById("room").value.trim();
+
+      if (username && room) {
+        // ローカルストレージに保存
+        localStorage.setItem("username", username);
+        localStorage.setItem("room", room);
+        // チャット画面へ遷移
+        window.location.href = "/chat.html";
+      }
+    });
+  </script>
+</body>
+</html>
