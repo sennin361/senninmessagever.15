@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>仙人チャット 管理画面</title>
+  <link rel="stylesheet" href="/admin.css" />
+</head>
+<body>
+  <div class="admin-container">
+    <h1>管理者ログイン</h1>
+    <form id="login-form">
+      <input type="password" id="admin-password" placeholder="管理者パスワード" required />
+      <button type="submit">ログイン</button>
+    </form>
+
+    <div id="admin-panel" style="display:none;">
+      <h2>管理パネル</h2>
+      <div>
+        <button id="logout-btn">ログアウト</button>
+      </div>
+
+      <section>
+        <h3>現在の接続ユーザー数</h3>
+        <p id="user-count">0</p>
+      </section>
+
+      <section>
+        <h3>チャットログ</h3>
+        <pre id="chat-log" class="chat-log"></pre>
+      </section>
+
+      <section>
+        <h3>管理者からの全体送信</h3>
+        <form id="admin-message-form">
+          <input type="text" id="admin-message-input" placeholder="メッセージを入力" required />
+          <button type="submit">送信</button>
+        </form>
+      </section>
+
+      <section>
+        <h3>BAN機能</h3>
+        <form id="ban-form">
+          <input type="text" id="ban-username" placeholder="ユーザー名を入力" required />
+          <button type="submit">BANする</button>
+        </form>
+      </section>
+
+      <section>
+        <h3>キーワード抽出（あいことば一覧）</h3>
+        <ul id="keywords-list"></ul>
+      </section>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/admin.js"></script>
+</body>
+</html>
