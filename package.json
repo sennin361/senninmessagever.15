@@ -1,0 +1,16 @@
+{
+  "name": "sennin-chat",
+  "version": "1.0.0",
+  "description": "セキュアなマルチルーム対応チャットアプリ（仙人チャット）",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["chat", "socket.io", "express", "pwa", "sennin", "secure"],
+  "author": "Sennin Systems",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}
