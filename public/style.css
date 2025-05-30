@@ -1,0 +1,133 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 2em;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container input,
+.login-container button {
+  width: 100%;
+  padding: 0.8em;
+  margin: 0.5em 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-info {
+  background: #ddd;
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 1em;
+  overflow-y: auto;
+  background: #f0f0f0;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+.message {
+  margin: 0.5em 0;
+  padding: 0.8em;
+  max-width: 60%;
+  border-radius: 10px;
+  clear: both;
+  position: relative;
+}
+
+.message.self {
+  background-color: #d1f5d3;
+  margin-left: auto;
+}
+
+.message.other {
+  background-color: white;
+  margin-right: auto;
+}
+
+.message.admin {
+  background-color: #fff4b8;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.message .meta {
+  font-size: 0.75em;
+  color: #666;
+  margin-bottom: 0.2em;
+}
+
+.message .text {
+  font-size: 1em;
+  word-wrap: break-word;
+}
+
+#message-form {
+  display: flex;
+  padding: 1em;
+  background: #fff;
+  border-top: 1px solid #ccc;
+}
+
+#message-input {
+  flex: 1;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#message-form button {
+  padding: 0.8em 1em;
+  margin-left: 0.5em;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#message-form button:hover {
+  background: #218838;
+}
+
+#leaveBtn {
+  background: #dc3545;
+  border: none;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#leaveBtn:hover {
+  background: #c82333;
+}
